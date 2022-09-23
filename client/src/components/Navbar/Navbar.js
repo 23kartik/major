@@ -35,11 +35,11 @@ const Navbar = () => {
 
     setUser(JSON.parse(localStorage.getItem('profile')));
   }, [location]);
-
+//Anécdote
   return (
     <AppBar className={classes.appBar} position="static" color="inherit">
       <Link to="/" className={classes.brandContainer}>
-        <h8 className="abc" height="45px" style={{ textDecoration: 'none'}}>Anécdote</h8>
+        <h8 className="abc" height="45px" style={{ textDecoration: 'none'}}>EventHub</h8>
      </Link>
       <Link to="/" className={classes.brandContainer}>
         

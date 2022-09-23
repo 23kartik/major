@@ -10,8 +10,8 @@ export default makeStyles((theme) => ({
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: '10px 50px',
-    backgroundImage: `url(https://media.istockphoto.com/photos/abstract-luxurious-polygonal-black-background-with-gold-accents-frame-picture-id1249749650?b=1&k=20&m=1249749650&s=170667a&w=0&h=iz5G9XEqoN8KL7YA2diq8sao7TR7ltulZ3OZ1UKDEbM=)`,
-    
+    // backgroundImage: `url(https://media.istockphoto.com/photos/abstract-luxurious-polygonal-black-background-with-gold-accents-frame-picture-id1249749650?b=1&k=20&m=1249749650&s=170667a&w=0&h=iz5G9XEqoN8KL7YA2diq8sao7TR7ltulZ3OZ1UKDEbM=)`,
+    backgroundColor:'#bcbcbc',
     [theme.breakpoints.down('sm')]: {
       flexDirection: 'column',
     },

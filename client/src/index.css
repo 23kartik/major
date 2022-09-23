@@ -1,6 +1,7 @@
 body {
-  background-color: #f5f8f8;
-  background-image: url('https://thedawnlitpost.com/wp-content/uploads/2013/09/8361545223_a9be3e3027_b.jpg');
+  background-color: rgb(20,9,65);
+  /* background-image: url('https://thedawnlitpost.com/wp-content/uploads/2013/09/8361545223_a9be3e3027_b.jpg'); */
   background-attachment: scroll;
   background-size: cover;
+  background-image: url("123.png");
 }

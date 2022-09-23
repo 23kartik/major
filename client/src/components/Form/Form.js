@@ -59,10 +59,23 @@ const Form = ({ currentId, setCurrentId }) => {
   return (
     <Paper className={classes.paper} elevation={6}>
       <form autoComplete="off" noValidate className={`${classes.root} ${classes.form}`} onSubmit={handleSubmit}>
-        <Typography variant="h6">{currentId ? `Editing "${post?.title}"` : 'Creating a Memory'}</Typography>
-        <TextField name="title" variant="outlined" label="Title" fullWidth value={postData.title} onChange={(e) => setPostData({ ...postData, title: e.target.value })} />
-        <TextField name="message" variant="outlined" label="Message" fullWidth multiline rows={4} value={postData.message} onChange={(e) => setPostData({ ...postData, message: e.target.value })} />
+        <Typography variant="h6">{currentId ? `Editing "${post?.title}"` : 'EventHub'}</Typography>
+        <TextField name="creator" variant="outlined" label="Event" fullWidth value={postData.creator} onChange={(e) => setPostData({ ...postData, creator: e.target.value })} />
+
+        <TextField name="title" variant="outlined" label="Description" fullWidth multiline rows={4} value={postData.title} onChange={(e) => setPostData({ ...postData, title: e.target.value })} />
+        <TextField
+          name="message"
+          variant="outlined"
+          label="Event Link"
+          fullWidth
+          required
+          value={postData.message}
+          onChange={(e) =>
+            setPostData({ ...postData, message: e.target.value })
+          }
+        />
         <div style={{ padding: '5px 0', width: '94%' }}>
+
           <ChipInput
             name="tags"
             variant="outlined"
@@ -73,6 +86,7 @@ const Form = ({ currentId, setCurrentId }) => {
             onDelete={(chip) => handleDeleteChip(chip)}
           />
         </div>
+      
         <div className={classes.fileInput}><FileBase type="file" multiple={false} onDone={({ base64 }) => setPostData({ ...postData, selectedFile: base64 })} /></div>
         <Button className={classes.buttonSubmit} variant="contained" color="primary" size="large" type="submit" fullWidth>Submit</Button>
         <Button variant="contained" color="secondary" size="small" onClick={clear} fullWidth>Clear</Button>
